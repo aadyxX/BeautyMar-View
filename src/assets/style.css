@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #DDA0DD; /* Plum */
+    --secondary-color: #FF69B4; /* HotPink */
+    --dark-color: #4B0082; /* Indigo */
+    --light-color: #FFF0F5; /* LavenderBlush */
+    --light-gray: #f8f9fa;
+    --dark-gray: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-banner, .footer-banner {
+    background-color: var(--dark-color);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.hero-section {
+    background-color: var(--light-color);
+    padding: 4rem 2rem;
+    background-image: repeating-linear-gradient(
+        45deg,
+        #ffebee 0px,
+        #ffebee 10px,
+        #fce4ec 10px,
+        #fce4ec 20px
+    );
+    background-size: cover;
+    background-position: center;
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary-custom:hover {
+    background-color: #C48EC4; /* Darker Plum */
+    border-color: #C48EC4;
+    color: #fff;
+}
+
+.btn-secondary-custom {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #000;
+}
+
+.btn-secondary-custom:hover {
+    background-color: #FF1493; /* DeepPink */
+    border-color: #FF1493;
+    color: #000;
+}
+
+.navbar-brand, .nav-link.active {
+    font-weight: bold;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px; /* Adjust as needed */
+    object-fit: cover;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.product-card-custom .card-body {
+    text-align: center;
+}
+
+.product-card-custom .btn-primary-custom {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product-card-custom:hover .btn-primary-custom {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para las flechas del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 1.5rem;
+}
